@@ -1,25 +1,22 @@
-# Aveo Launcher V0.1
+# Aveo Launcher 1.0.0
 
-Android 10 (API 29) launcher prototype for Diamond / Allwinner A133 head unit.
+Version avancée pour tablette Diamond / Android 10.
 
-## Cloud build (no Android Studio)
-1. Create a new GitHub repository.
-2. Upload the *contents* of this folder to the root of the repository, including `.github/workflows/build-apk.yml`.
-3. Go to Actions > Build Aveo Launcher APK > Run workflow (or push to main).
-4. Once the run succeeds, download the `AveoLauncher-debug-apk` artifact from the run summary, unzip it, and install `app-debug.apk` on the head unit.
+## Inclus
+- mode HOME / écran d'accueil Android
+- bouton pour définir Aveo Launcher comme accueil par défaut
+- interface sombre inspirée du style TikTok choisi
+- vue 3D légère OpenGL ES d'une Aveo blanche stylisée
+- rotation au doigt + zoom par pincement
+- raccourcis TLink5 / Navigation / Radio / Musique / Applications
+- lecture de la tension remontée par Android
+- vitesse GPS (avec permission localisation)
+- cartes d'état multimédia / moteur / connectivité
 
-Note: GitHub artifact download requires appropriate repository access/login. APK is debug-signed for testing. Do not remove the original Diamond launcher or Nova Launcher.
+## Limites de cette version
+- le modèle 3D est une stylisation légère, pas encore un scan fidèle de l'Aveo T250
+- les données moteur OBD ne sont pas encore câblées
+- l'affichage Now Playing natif dépend d'une intégration supplémentaire
 
-## Implemented
-- Android HOME launcher activity, landscape
-- Dark three-column layout, live clock
-- Installed apps list and shortcuts (TLink, Maps, Radio, Music) via labels
-- Non-fabricated vehicle-data placeholders
-
-## Not implemented yet
-- Actual Aveo 3D model, vehicle data, CAN/MCU bridge, media metadata
-
-## Limitations
-- Some proprietary Diamond apps may not be exposed as normal launcher activities.
-- Bottom proprietary Diamond bar remains system-managed; available layout space may differ by firmware.
-- Launcher defaults can be changed in Android settings if supported.
+## Build
+Utiliser GitHub Actions comme pour les versions précédentes.
